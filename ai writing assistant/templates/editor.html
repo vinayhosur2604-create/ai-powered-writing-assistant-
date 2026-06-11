@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>AI Writing Assistant</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <h2>AI Writer</h2>
+
+        <button type="button" onclick="checkGrammar()">Grammar Check</button>
+
+        <button type="button">Improve Writing</button>
+
+        <button type="button">Summarize</button>
+
+        <button type="button" onclick="toggleMode()">
+            Dark Mode
+        </button>
+
+    </div>
+
+    <div class="main">
+
+        <h1>Writing Workspace</h1>
+
+        <textarea
+        id="inputText"
+        placeholder="Start typing here...">
+        </textarea>
+
+        <div class="stats">
+
+            <span id="words">Words: 0</span>
+
+            <span id="chars">Characters: 0</span>
+
+            <span id="read">Reading Time: 0 min</span>
+
+        </div>
+
+        <h2>Result</h2>
+
+        <div id="output">
+
+            Processed text will appear here...
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<button onclick="checkGrammar()">
+    Grammar Check
+</button>
+
+</body>
+</html>
